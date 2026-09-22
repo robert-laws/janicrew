@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+title: Industries
+permalink: /industries/
+description: "Commercial cleaning for office buildings, medical and dental practices, schools, health clubs, auto dealerships, retail, food service and real estate, with specifications written around each industry's regulations."
+eyebrow: Industries we serve
+heading: Built around your building's rules.
+lede: "A dental practice, a dealership and a school do not need the same scope. Pick your kind of building to see what we focus on, then ask for a free walkthrough."
+heroImage: floorBuffer
+heroLabel: Crew member running a floor buffer in a lobby
+---
+{% include "partials/hero.njk" %}
+
+<section class="section">
+  <div class="container">
+    {% include "partials/industry-grid.njk" %}
+    <div class="panel" style="margin-top: var(--space-6)">
+      <h3>Don't see your kind of building?</h3>
+      <p>Warehouses, places of worship, clinics, studios: if it has floors and restrooms, we can write a scope for it. <a href="/quote/?industry=other">Tell us about it in the quote form</a> or call {{ site.phoneDisplay }}.</p>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

@@ -1,0 +1,88 @@
+/* JaniCrew design tokens
+   ------------------------------------------------------------------
+   Brand colours come from the logo: blue #002898, yellow #F8D800.
+
+   CONTRAST RULE: yellow on white is ~1.4:1. Yellow NEVER carries text
+   or thin icons on a light background. Allowed pairs:
+     blue-700 on white   (~11.9:1)   white on blue-700   (~11.9:1)
+     blue-900 on yellow  (~8.4:1)    yellow on blue-900  (>10:1)
+   Yellow is a fill, a border or an accent on deep blue only.
+   ------------------------------------------------------------------ */
+:root {
+  /* palette */
+  --blue-900: #001c5c;
+  --blue-800: #00257a;
+  --blue-700: #002898;
+  --blue-600: #1a44b8;
+  --blue-100: #dbe6ff;
+  --blue-50: #f0f4ff;
+  --yellow-500: #f8d800;
+  --yellow-600: #ccb100;
+  --yellow-100: #fffad6;
+  --ink: #1a1a1a;
+  --gray-700: #4b5060;
+  --gray-500: #7a8090;
+  --gray-300: #d3d6de;
+  --gray-100: #f4f5f8;
+  --white: #ffffff;
+
+  /* semantic */
+  --color-text: var(--ink);
+  --color-text-muted: var(--gray-700);
+  --color-bg: var(--white);
+  --color-bg-alt: var(--gray-100);
+  --color-bg-tint: var(--blue-50);
+  --color-primary: var(--blue-700);
+  --color-primary-hover: var(--blue-800);
+  --color-accent: var(--yellow-500);
+  --color-accent-deep: var(--yellow-600);
+  --color-border: var(--gray-300);
+  --color-on-dark: var(--white);
+  --color-on-dark-muted: #c9d3f2;
+  --focus-ring: 3px solid var(--blue-700);
+  --focus-ring-on-dark: 3px solid var(--yellow-500);
+
+  /* type */
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.2vw, 2.2rem);
+  --text-3xl: clamp(2.1rem, 1.6rem + 2.2vw, 2.9rem);
+  --text-display: clamp(2.4rem, 1.7rem + 3.2vw, 3.75rem);
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-body: 1.6;
+  --tracking-caps: 0.12em;
+
+  /* space */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --section-y: clamp(3rem, 6vw, 6rem);
+  --gutter: clamp(1rem, 4vw, 2rem);
+
+  /* layout */
+  --container: 72rem;
+  --container-narrow: 46rem;
+  --container-wide: 84rem;
+  --header-h: 4.5rem;
+
+  /* shape */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --frame: 4px; /* the card's blue photo frames */
+  --shadow: 0 12px 32px -14px rgba(0, 28, 92, 0.28);
+  --shadow-sm: 0 2px 8px -2px rgba(0, 28, 92, 0.16);
+}

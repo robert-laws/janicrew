@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "office-building",
+    "name": "Office Building",
+    "shortName": "Offices",
+    "headline": "An office your team is glad to walk into.",
+    "intro": "Desks, phones, break rooms and restrooms, cleaned on a schedule that fits your hours and never gets in the way of the work day.",
+    "emphasis": ["Reception / Lobby", "Offices", "Restrooms", "Break Room", "Carpets"],
+    "regulations": "",
+    "image": "officeVacuuming"
+  },
+  {
+    "slug": "medical-dental",
+    "name": "Medical / Dental",
+    "shortName": "Medical & Dental",
+    "headline": "Cleaning that respects the rules you work under.",
+    "intro": "Waiting rooms, treatment areas, restrooms and staff spaces, with specifications written around your practice's infection-control requirements.",
+    "emphasis": ["Reception / Lobby", "Restrooms", "Floors", "Offices"],
+    "regulations": "We build your practice's infection-control and disposal requirements into the written scope before the first visit.",
+    "image": "restroomSink"
+  },
+  {
+    "slug": "schools",
+    "name": "Schools",
+    "shortName": "Schools",
+    "headline": "Classrooms ready before the first bell.",
+    "intro": "Hallways, restrooms, staff rooms and front offices, cleaned after hours so the building is ready for students every morning.",
+    "emphasis": ["Floors", "Restrooms", "Reception / Lobby", "Break Room", "Carpets"],
+    "regulations": "Background-checked crews and product choices that suit a building full of children.",
+    "image": "lobbyMopping"
+  },
+  {
+    "slug": "health-club",
+    "name": "Health Club",
+    "shortName": "Health Clubs",
+    "headline": "Sweat is the point. Grime is not.",
+    "intro": "Locker rooms, showers, floors and front desks, kept clean through the busiest hours of the day.",
+    "emphasis": ["Restrooms", "Floors", "Reception / Lobby", "Carpets"],
+    "regulations": "",
+    "image": "showerScrub"
+  },
+  {
+    "slug": "auto-dealership",
+    "name": "Auto Dealership",
+    "shortName": "Auto Dealerships",
+    "headline": "A showroom as clean as the cars in it.",
+    "intro": "Showroom floors, customer lounges, restrooms and sales offices, so the building sells the way the vehicles do.",
+    "emphasis": ["Reception / Lobby", "Floors", "Restrooms", "Offices", "Break Room"],
+    "regulations": "",
+    "image": "floorBuffer"
+  },
+  {
+    "slug": "retail",
+    "name": "Retail",
+    "shortName": "Retail",
+    "headline": "Customers notice clean. They remember dirty.",
+    "intro": "Sales floors, fitting rooms, restrooms and back rooms, cleaned before you open or after you close.",
+    "emphasis": ["Floors", "Reception / Lobby", "Restrooms", "Break Room"],
+    "regulations": "",
+    "image": null
+  },
+  {
+    "slug": "food-service",
+    "name": "Food Service",
+    "shortName": "Food Service",
+    "headline": "Front-of-house clean, every service.",
+    "intro": "Dining rooms, entrances, restrooms and staff areas. Tell us what your health inspector looks for and we build it into the scope.",
+    "emphasis": ["Floors", "Restrooms", "Reception / Lobby", "Break Room"],
+    "regulations": "Scope written around your local health-code requirements for customer and staff areas.",
+    "image": null
+  },
+  {
+    "slug": "real-estate",
+    "name": "Real Estate",
+    "shortName": "Real Estate",
+    "headline": "Show-ready for every showing.",
+    "intro": "Leasing offices, common areas, model units and vacant spaces between tenants.",
+    "emphasis": ["Reception / Lobby", "Offices", "Restrooms", "Floors", "Carpets"],
+    "regulations": "",
+    "image": "conferenceTable"
+  }
+]

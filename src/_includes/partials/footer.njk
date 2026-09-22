@@ -1,0 +1,46 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <img src="/images/logo-256.png" width="64" height="64" alt="JaniCrew diamond logo" loading="lazy">
+      <p class="site-footer__tagline">{{ site.tagline }}</p>
+      <p class="site-footer__support">{{ site.supportingLine }}</p>
+      <p class="site-footer__owned">{{ janicrew.company.ownershipLine }}.</p>
+    </div>
+    <nav class="site-footer__col" aria-label="Services">
+      <h2 class="site-footer__heading">Services</h2>
+      <ul>
+        {% for a in janicrew.services.coreScope %}{% if a.tasks.length %}
+        <li><a href="/services/#{{ a.area | slugify }}">{{ a.area }}</a></li>
+        {% endif %}{% endfor %}
+        <li><a href="/services/#additional-services">Additional services</a></li>
+      </ul>
+    </nav>
+    <nav class="site-footer__col" aria-label="Industries">
+      <h2 class="site-footer__heading">Industries</h2>
+      <ul>
+        {% for i in industries %}
+        <li><a href="/industries/{{ i.slug }}/">{{ i.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <nav class="site-footer__col" aria-label="Company">
+      <h2 class="site-footer__heading">Company</h2>
+      <ul>
+        {% for item in nav.footerCompany %}
+        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+      <p class="site-footer__contact">
+        <a href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.draft and site.emailIsPlaceholder %} {% placeholder "confirm email" %}{% endif %}
+      </p>
+    </nav>
+  </div>
+  <div class="site-footer__bar">
+    <div class="container site-footer__bar-inner">
+      <p class="site-footer__trust">{{ janicrew.company.trust | join(" · ") }}</p>
+      <p>Serving {{ site.region }}{% if site.draft %} {% placeholder "region" %}{% endif %}</p>
+      <p>&copy; {% year %} JaniCrew</p>
+    </div>
+  </div>
+</footer>

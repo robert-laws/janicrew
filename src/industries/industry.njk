@@ -1,0 +1,61 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: industries
+  size: 1
+  alias: industry
+  addAllPagesToCollections: true
+permalink: "/industries/{{ industry.slug }}/"
+eleventyComputed:
+  title: "{{ industry.name | safe }} Cleaning"
+  description: "{{ industry.headline | safe }} {{ industry.intro | safe }}"
+  eyebrow: "{{ industry.name | safe }} cleaning"
+  heading: "{{ industry.headline | safe }}"
+  lede: "{{ industry.intro | safe }}"
+  heroImage: "{{ industry.image | safe }}"
+  heroLabel: "{{ industry.name | safe }} photo"
+---
+{% include "partials/hero.njk" %}
+
+<section class="section">
+  <div class="container with-aside">
+    <div>
+      <div class="section-header">
+        <p class="eyebrow">What we focus on</p>
+        <h2>In a {{ industry.name | lower }}, the scope starts here.</h2>
+        <p class="lede">Every JaniCrew scope is written room by room. These are the areas that matter most in your kind of building, with exactly what each one includes.</p>
+      </div>
+      <div class="stack stack--lg">
+        {% for name in industry.emphasis %}
+        {% set a = janicrew.services.coreScope | areaByName(name) %}
+        {% if a %}
+        <div class="feature">
+          <span class="feature__icon" aria-hidden="true"></span>
+          <h3><a href="/services/#{{ a.area | slugify }}">{{ a.area }}</a></h3>
+          <p>{{ a.tasks | joinTasks(" · ") }}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <div class="panel" style="margin-top: var(--space-7)">
+        <h3>Regulations and special specifications</h3>
+        <p>{% if industry.regulations %}{{ industry.regulations }}{% else %}Tell us what your inspectors, insurers or head office require and we write it into the scope before the first visit.{% endif %}</p>
+      </div>
+      <p style="margin-top: var(--space-6)">Need something beyond the routine? See <a href="/services/#additional-services">additional services</a>: day porter, floor care, carpet cleaning and window washing.</p>
+    </div>
+    <aside class="aside-card" aria-label="Get a quote">
+      <h2>Free quote for your {{ industry.shortName | lower }}</h2>
+      <p>Five to ten minutes on site. A monthly estimate in writing. No obligation.</p>
+      <a class="btn btn--accent btn--lg" href="/quote/?industry={{ industry.slug }}">Get a Free Quote</a>
+      <p>Or call <a class="phone" href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a></p>
+      <ul class="checklist">
+        {% for t in janicrew.company.trust %}<li>{{ t }}</li>{% endfor %}
+        <li>Locally owned and operated</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+{% set ctaPrimaryUrl = "/quote/?industry=" + industry.slug %}
+{% set ctaTitle = "Ready for a free walkthrough of your " + (industry.shortName | lower) + "?" %}
+{% include "partials/cta-band.njk" %}

@@ -1,0 +1,49 @@
+{
+  "eyebrow": "Own a JaniCrew",
+  "title": "Run your own cleaning business under a name people trust.",
+  "intro": "JaniCrew franchisees own and operate their business independently. They adopt the JaniCrew name, serve their own community, and uphold the JaniCrew Standard. The rest is theirs.",
+  "teaser": {
+    "title": "Own a JaniCrew in your community",
+    "body": "Independently owned, locally operated, backed by a name and a standard your customers can recognise. See what it takes to start a JaniCrew of your own.",
+    "cta": "Learn about owning a JaniCrew"
+  },
+  "model": [
+    {
+      "title": "You own it",
+      "body": "A JaniCrew franchise is your business. You hire your crew, choose your accounts, and keep the relationships you build."
+    },
+    {
+      "title": "You carry the name",
+      "body": "The JaniCrew diamond on your shirts and your truck tells customers what to expect before you say a word."
+    },
+    {
+      "title": "You uphold the Standard",
+      "body": "Every JaniCrew commits to the same written standard: scoped work, insured crews, a local owner on the phone, and a free walkthrough for every prospect."
+    }
+  ],
+  "whoFor": [
+    "People who already clean well and want their own name on the door.",
+    "Owner-operators who would rather be on site than behind a desk.",
+    "Anyone who takes pride in a building that looks right when the lights come on."
+  ],
+  "provides": [
+    { "title": "The brand", "body": "The JaniCrew name, logo, uniforms and vehicle graphics.", "placeholder": false },
+    { "title": "The Standard", "body": "The written scope templates, quote worksheet and checklists every JaniCrew uses.", "placeholder": false },
+    { "title": "Training", "body": "Initial training on the JaniCrew method and the quote process.", "placeholder": "training programme details" },
+    { "title": "Territory", "body": "A defined local territory for your JaniCrew.", "placeholder": "territory terms" },
+    { "title": "Investment", "body": "Start-up cost and ongoing fees.", "placeholder": "franchise fee and royalty structure" }
+  ],
+  "commit": [
+    "Work to the written JaniCrew Standard on every account.",
+    "Carry insurance and bonding and hold the licences your area requires.",
+    "Wear the uniform and keep the diamond visible on your crew and vehicles.",
+    "Offer every prospect a free, no-obligation walkthrough and a written monthly estimate.",
+    "Answer your own phone."
+  ],
+  "steps": [
+    { "title": "Say hello", "body": "Send the enquiry form below or call us. Tell us where you are and what you clean today." },
+    { "title": "Talk it through", "body": "A conversation about your market, your goals, and what a JaniCrew territory would look like." },
+    { "title": "Review the details", "body": "Terms, territory and training, in writing." },
+    { "title": "Open your JaniCrew", "body": "Uniforms on, truck lettered, first walkthrough booked." }
+  ]
+}

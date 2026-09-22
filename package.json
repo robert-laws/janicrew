@@ -1,0 +1,22 @@
+{
+  "name": "janicrew",
+  "version": "0.1.0",
+  "description": "JaniCrew commercial cleaning website (Eleventy, GitHub Pages)",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "build:root": "PATH_PREFIX=/ eleventy",
+    "clean": "rm -rf _site",
+    "check": "npm run build && node tools/check-links.mjs",
+    "images": "python3 tools/make-images.py"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

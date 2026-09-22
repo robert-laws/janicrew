@@ -1,0 +1,45 @@
+{#
+  Page hero. Front-matter inputs:
+    heading      h1 text (falls back to title)
+    eyebrow      small caps label above the h1
+    lede         one-paragraph intro
+    heroImage    key in images.json (renders a split hero with photo)
+    heroLabel    caption for the placeholder when the slot is empty
+    heroRatio    aspect ratio for the media (default 4/3)
+    heroDark     true for the blue-900 variant
+    heroCtas     list of {label, url, style} (default: quote + phone); set to false for none
+#}
+{% set img = images | slot(heroImage) %}
+{% set ctas = heroCtas if heroCtas is defined else [
+  { "label": "Get a Free Quote", "url": "/quote/", "style": "primary" },
+  { "label": "Call " + site.phoneDisplay, "url": site.phoneHref, "style": "secondary" }
+] %}
+<section class="hero{% if heroDark %} hero--dark{% endif %}{% if heroImage %} hero--split{% endif %}">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+      <h1 class="hero__title">{{ heading or title }}</h1>
+      {% if lede %}<p class="lede hero__lede">{{ lede }}</p>{% endif %}
+      {% if ctas %}
+      <div class="hero__actions">
+        {% for c in ctas %}
+        <a class="btn btn--{{ c.style or 'primary' }}{% if heroDark and c.style == 'secondary' %} btn--on-dark{% endif %} btn--lg" href="{{ c.url }}">{{ c.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if heroTrust %}
+      <ul class="trust-bar hero__trust" aria-label="Credentials">
+        {% for t in janicrew.company.trust %}<li class="badge">{{ t }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% if heroImage %}
+    <div class="hero__media">
+      {% set slotLabel = heroLabel %}
+      {% set ratio = heroRatio or "4/3" %}
+      {% set eager = true %}
+      {% include "partials/image-slot.njk" %}
+    </div>
+    {% endif %}
+  </div>
+</section>

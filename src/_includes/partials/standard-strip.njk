@@ -1,0 +1,10 @@
+{# Inputs: standardLimit (number of commitments to show, default all), standardDark (bool) #}
+<div class="grid grid--3">
+  {% for c in standard.commitments %}{% if not standardLimit or loop.index <= standardLimit %}
+  <div class="feature">
+    <span class="feature__icon" aria-hidden="true"></span>
+    <h3>{{ c.title }}</h3>
+    <p>{{ c.body }}</p>
+  </div>
+  {% endif %}{% endfor %}
+</div>

@@ -1,0 +1,275 @@
+{
+  "extracted": "2026-09-22",
+  "sources": [
+    "front.jpeg",
+    "back.jpeg"
+  ],
+  "company": {
+    "name": "JaniCrew",
+    "nameVariants": [
+      "JaniCrew",
+      "JANICREW",
+      "Jani Crew"
+    ],
+    "phone": "1-800-355-2648",
+    "phoneDisplay": "(800) 355-2648",
+    "website": "www.janicrew.com",
+    "websiteStatus": "placeholder",
+    "model": "Parent brand and franchisor. Franchisees adopt the JaniCrew name and operate independently while upholding the JaniCrew standard of quality.",
+    "ownershipLine": "JaniCrew is independently owned and operated locally, committed to our communities",
+    "trust": [
+      "Insured",
+      "Bonded",
+      "Licensed"
+    ],
+    "cta": {
+      "primary": "Free Quote",
+      "visit": "Call us to schedule an on-site visit",
+      "visitTerms": [
+        "No obligation",
+        "Free",
+        "No hassle",
+        "5-10 minutes most"
+      ]
+    },
+    "openingLine": "JaniCrew appreciates this opportunity to outline our services",
+    "phoneHref": "tel:+18003552648"
+  },
+  "brand": {
+    "logo": {
+      "shape": "Yellow diamond (square rotated 45 degrees) with blue outline, road-sign style",
+      "figure": "Blue silhouette of a capped worker walking left to right pushing a canister vacuum / floor machine by its wand",
+      "text": {
+        "left": "Jani",
+        "right": "Crew",
+        "style": "blue serif on the diamond's horizontal midline"
+      },
+      "variants": [
+        "full colour (yellow/blue)",
+        "one-colour black"
+      ],
+      "seenOn": [
+        "postcard",
+        "crew polo shirt back",
+        "company pickup truck door"
+      ],
+      "assets": {
+        "master": "src/images/logo.png",
+        "svgNeeded": false
+      }
+    },
+    "colors": {
+      "brandBlue": "#002898",
+      "deepBlue": "#001C5C",
+      "brandYellow": "#F8D800",
+      "deepYellow": "#CCB100",
+      "white": "#FFFFFF",
+      "ink": "#1A1A1A",
+      "incidentalRed": "#A81010"
+    },
+    "typography": {
+      "headings": {
+        "observed": "Bold serif, Times New Roman Bold family, brand blue",
+        "webCandidates": [
+          "Libre Baskerville",
+          "Source Serif 4",
+          "Tinos"
+        ]
+      },
+      "labels": {
+        "observed": "Bold geometric sans, all caps, wide tracking",
+        "webCandidates": [
+          "Jost",
+          "Outfit"
+        ]
+      },
+      "body": {
+        "observed": "Plain sans (Helvetica/Arial)",
+        "webCandidates": [
+          "Inter",
+          "Source Sans 3"
+        ]
+      }
+    },
+    "imagery": {
+      "style": "Photo collage of real uniformed crews in commercial facilities, blue photo frames, yellow starburst CTA",
+      "subjects": [
+        "Crew member in blue JaniCrew polo scrubbing tiled shower wall",
+        "Red company pickup with logo on door outside a commercial building",
+        "Crew member emptying office trash at cubicles",
+        "Empty corporate boardroom",
+        "Office lobby / entrance",
+        "Worker in red apron vacuuming carpeted hallway",
+        "Crew member in blue polo vacuuming office floor"
+      ],
+      "themes": [
+        "real crews, real facilities",
+        "commercial only",
+        "visible branding on uniforms and vehicles",
+        "clean, ready rooms as the result",
+        "free quick no-hassle quote"
+      ]
+    },
+    "era": "Late-1990s / 2000s direct-mail postcard; modernise but keep diamond, blue/yellow, serif wordmark",
+    "voice": [
+      "plain and direct",
+      "courteous",
+      "low-pressure",
+      "local and accountable"
+    ]
+  },
+  "services": {
+    "coreScope": [
+      {
+        "area": "Reception / Lobby",
+        "rationale": "This is the 'Face' of your Business",
+        "tasks": [
+          "Trash",
+          "Spot clean door",
+          "Arrange magazines",
+          "Wipe clean front counter",
+          "Secure"
+        ]
+      },
+      {
+        "area": "Restrooms",
+        "rationale": "Sanitation is the utmost importance",
+        "tasks": [
+          "Trash",
+          "Clean",
+          "Disinfect",
+          "Refill",
+          "Odor control"
+        ]
+      },
+      {
+        "area": "Carpets",
+        "rationale": null,
+        "tasks": [
+          "Vacuuming",
+          "Spot cleaning",
+          "Edge vacuum"
+        ]
+      },
+      {
+        "area": "Floors",
+        "rationale": null,
+        "tasks": [
+          "Sweep",
+          "Damp mop",
+          "Disinfect"
+        ]
+      },
+      {
+        "area": "Offices",
+        "rationale": null,
+        "tasks": [
+          "Trash",
+          "Dust",
+          "Polish desk if cleared",
+          "Blinds",
+          "Window sills",
+          "Disinfect phones",
+          "Air grills",
+          "Recycling"
+        ]
+      },
+      {
+        "area": "Break Room",
+        "rationale": null,
+        "tasks": [
+          "Trash",
+          "Sinks",
+          "Counters",
+          "Tables",
+          "Appliances"
+        ]
+      },
+      {
+        "area": "Additional Specifications",
+        "rationale": "Tailored to your industry regulations",
+        "tasks": []
+      }
+    ],
+    "additional": [
+      "Day Porter",
+      "Substitute Custodian / Janitor / Maid",
+      "Carpet Cleaning",
+      "Floor Care",
+      "Window Washing",
+      "Other"
+    ],
+    "schedules": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Other"
+    ],
+    "pricing": {
+      "basis": "Monthly estimated charge",
+      "method": "Short on-site walkthrough, then custom quote",
+      "publishedRates": false
+    }
+  },
+  "industries": [
+    "Health Club",
+    "Auto Dealership",
+    "Medical / Dental",
+    "Retail",
+    "Schools",
+    "Office Building",
+    "Food Service",
+    "Real Estate",
+    "Other"
+  ],
+  "quoteWorksheet": {
+    "purpose": [
+      "Quick Quote",
+      "Our Company Info"
+    ],
+    "fields": [
+      "Scope checklist by area",
+      "Additional specifications for industry regulations",
+      "Industry",
+      "Notes",
+      "Schedule",
+      "Monthly Estimated Charges ($)",
+      "Quoted By",
+      "Date",
+      "Additional services checklist",
+      "Prepared For / Send To"
+    ]
+  },
+  "cardCorrections": {
+    "Vacuming": "Vacuuming",
+    "Dampmop": "Damp mop",
+    "taylor": "tailor",
+    "commited": "committed"
+  },
+  "competitors": [
+    {
+      "name": "Jani-King",
+      "url": "https://www.janiking.com/",
+      "tagline": "A higher level of cleanliness",
+      "primaryCta": "Get a Quote",
+      "founded": 1969,
+      "scale": "6,900 unit franchises, 120 support offices, 10 countries",
+      "retentionClaim": "9-year average customer retention vs 1-year industry average",
+      "qualitySystem": "Activity tracking with a named point of contact; trained, certified, licensed, insured franchisees",
+      "franchiseTiers": [
+        "Unit",
+        "Domestic regional",
+        "International"
+      ]
+    },
+    {
+      "name": "JAN-PRO",
+      "url": "https://jan-pro.com/",
+      "tagline": "Measurable Cleaning. Guaranteed Results.",
+      "primaryCta": "Free Estimate",
+      "awards": "Entrepreneur #1 commercial cleaning franchise, 15 consecutive years",
+      "qualitySystem": "Signature Clean training, MEDMETRIX healthcare, ENVIROSHIELD disinfection, JAN-PRO TECHNICS equipment, Service Guaranteed",
+      "franchisePitch": "5-course certification, guaranteed client accounts, no selling, part-time from ~3 hrs/week, veteran program, regional developer tier"
+    }
+  ]
+}

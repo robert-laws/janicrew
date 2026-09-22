@@ -1,0 +1,88 @@
+---
+layout: layouts/base.njk
+title: Services
+permalink: /services/
+description: "Exactly what JaniCrew cleans in each area of your building: reception, restrooms, carpets, floors, offices and break rooms, plus day porter, floor care, carpet cleaning and window washing."
+eyebrow: Commercial cleaning services
+heading: Exactly what we clean, room by room.
+lede: "A JaniCrew scope is a checklist, not a promise. This is what each area includes, and it is the same list your local owner walks through with you on site."
+heroImage: conferenceTable
+heroLabel: Crew member wiping a boardroom table
+---
+{% include "partials/hero.njk" %}
+
+<section class="section section--tight">
+  <div class="container">
+    <blockquote class="pull-quote">
+      "{{ janicrew.company.openingLine }}."
+      <cite>The line at the top of every JaniCrew quote sheet</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="section section--tight" id="scope">
+  <div class="container">
+    {% set areaImages = {
+      "Reception / Lobby": "lobbyMopping",
+      "Restrooms": "restroomSink",
+      "Carpets": "officeVacuuming",
+      "Floors": "floorBuffer",
+      "Offices": "deskWipe",
+      "Break Room": "supplyCaddy"
+    } %}
+    {% for a in janicrew.services.coreScope %}{% if a.tasks.length %}
+    <article class="area area--media" id="{{ a.area | slugify }}">
+      <div class="area__head">
+        <h2>{{ a.area }}</h2>
+        {% if a.rationale %}<p>{{ a.rationale }}</p>{% endif %}
+      </div>
+      <ul class="checklist checklist--2">
+        {% for t in a.tasks %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+      <div>
+        {% set img = images | slot(areaImages[a.area]) %}
+        {% set slotLabel = a.area + " photo" %}
+        {% set ratio = "4/3" %}
+        {% set eager = false %}
+        {% include "partials/image-slot.njk" %}
+      </div>
+    </article>
+    {% endif %}{% endfor %}
+    <article class="area" id="additional-specifications">
+      <div class="area__head">
+        <h2>Additional specifications</h2>
+        <p>Tailored to your industry regulations</p>
+      </div>
+      <div>
+        <p>Health codes, infection control, after-hours access, background checks, product restrictions: whatever your industry requires goes into the written scope before we start. See the <a href="/industries/">industries we serve</a> for what we focus on in each kind of building.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section--alt" id="additional-services">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Additional services</p>
+      <h2>When you need more than the routine.</h2>
+      <ul class="checklist">
+        {% for s in janicrew.services.additional %}{% if s != "Other" %}
+        <li>{{ s }}</li>
+        {% endif %}{% endfor %}
+        <li>Something else? Ask. If we cannot do it, we will say so.</li>
+      </ul>
+    </div>
+    <div class="grid grid--2">
+      <div class="panel">
+        <h3>Schedules</h3>
+        <p>{{ janicrew.services.schedules | joinTasks(", ") | replace("Other", "or a schedule of your own") }}. Most accounts run after hours; day porter service covers you during the day.</p>
+      </div>
+      <div class="panel panel--yellow">
+        <h3>How pricing works</h3>
+        <p>You get a monthly estimate in writing, based on the scope and the schedule, after a 5-10 minute walkthrough. There is no rate card because no two buildings are the same.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

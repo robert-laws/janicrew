@@ -1,0 +1,14 @@
+{
+  "header": [
+    { "label": "Services", "url": "/services/" },
+    { "label": "Industries", "url": "/industries/" },
+    { "label": "Why JaniCrew", "url": "/why-janicrew/" },
+    { "label": "Own a JaniCrew", "url": "/own-a-janicrew/" }
+  ],
+  "footerCompany": [
+    { "label": "Why JaniCrew", "url": "/why-janicrew/" },
+    { "label": "Own a JaniCrew", "url": "/own-a-janicrew/" },
+    { "label": "Contact", "url": "/contact/" },
+    { "label": "Get a Free Quote", "url": "/quote/" }
+  ]
+}

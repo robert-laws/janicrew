@@ -1,0 +1,13 @@
+{# Inputs: ctaTitle, ctaBody, ctaPrimaryLabel, ctaPrimaryUrl (defaults to the free quote) #}
+<section class="cta-band">
+  <div class="container cta-band__inner">
+    <div>
+      <h2>{{ ctaTitle or "Ready for a free, no-hassle quote?" }}</h2>
+      <p>{{ ctaBody or ("Five to ten minutes on site and a written monthly estimate. No obligation. Or call " + site.phoneDisplay + " and talk to your local JaniCrew owner.") }}</p>
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--accent btn--lg" href="{{ ctaPrimaryUrl or '/quote/' }}">{{ ctaPrimaryLabel or "Get a Free Quote" }}</a>
+      <a class="btn btn--on-dark btn--lg" href="{{ site.phoneHref }}">Call {{ site.phoneDisplay }}</a>
+    </div>
+  </div>
+</section>

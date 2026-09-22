@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Contact
+permalink: /contact/
+description: "Call JaniCrew at (800) 355-2648 or request a free quote online. Independently owned and operated locally."
+eyebrow: Contact
+heading: Talk to your local JaniCrew.
+lede: "One number, one owner, no call centre. Call, email, or send a quote request and we book a walkthrough."
+heroCtas: false
+---
+{% include "partials/hero.njk" %}
+
+<section class="section">
+  <div class="container split split--wide-text">
+    <div class="stack stack--lg">
+      <div>
+        <p class="eyebrow">Phone</p>
+        <p><a class="phone" href="{{ site.phoneHref }}" style="font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; text-decoration: none; line-height: 1.1">{{ site.phoneDisplay }}</a></p>
+        <p class="mb-0">{{ janicrew.company.trust | join(" · ") }}</p>
+      </div>
+      <div>
+        <p class="eyebrow">Email</p>
+        <p class="mb-0"><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.draft and site.emailIsPlaceholder %} {% placeholder "confirm email address" %}{% endif %}</p>
+      </div>
+      <div>
+        <p class="eyebrow">Where we work</p>
+        <p class="mb-0">Serving {{ site.region }}{% if site.draft %} {% placeholder "region / service area" %}{% endif %}. {{ janicrew.company.ownershipLine }}.</p>
+        {% if site.address %}<address>{{ site.address }}</address>{% elif site.draft %}<p class="mb-0">{% placeholder "street address" %}</p>{% endif %}
+      </div>
+      <div>
+        <p class="eyebrow">Hours</p>
+        <p class="mb-0">{% if site.hours %}{{ site.hours }}{% else %}Most accounts are cleaned after hours. Walkthroughs happen whenever suits you.{% if site.draft %} {% placeholder "office hours" %}{% endif %}{% endif %}</p>
+      </div>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="/quote/">Get a Free Quote</a>
+        <a class="btn btn--secondary btn--lg" href="/own-a-janicrew/">Own a JaniCrew</a>
+      </div>
+    </div>
+    <div>
+      {% set img = images | slot("supplyCaddy") %}
+      {% set slotLabel = "JaniCrew supply caddy" %}
+      {% set ratio = "4/3" %}
+      {% set eager = false %}
+      {% include "partials/image-slot.njk" %}
+    </div>
+  </div>
+</section>

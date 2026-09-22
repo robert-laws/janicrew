@@ -1,0 +1,93 @@
+{
+  "lobbyMopping": {
+    "src": "photos/lobby-mopping-16x9.jpg",
+    "alt": "A JaniCrew crew member mopping a polished lobby floor beside a wet-floor sign",
+    "width": 1600,
+    "height": 900,
+    "ratio": "1600/900"
+  },
+  "conferenceTable": {
+    "src": "photos/conference-4x3.jpg",
+    "alt": "A JaniCrew crew member wiping down a long boardroom table",
+    "width": 1600,
+    "height": 1200,
+    "ratio": "1600/1200"
+  },
+  "janitorialCart": {
+    "src": "photos/janitorial-cart-4x5.jpg",
+    "alt": "A JaniCrew crew member emptying office wastebaskets into a janitorial cart",
+    "width": 1280,
+    "height": 1600,
+    "ratio": "1280/1600"
+  },
+  "officeVacuuming": {
+    "src": "photos/office-vacuuming-1x1.jpg",
+    "alt": "A JaniCrew crew member vacuuming carpet between office cubicles",
+    "width": 1600,
+    "height": 1600,
+    "ratio": "1600/1600"
+  },
+  "showerScrubTall": {
+    "src": "photos/shower-scrub-9x16.jpg",
+    "alt": "A JaniCrew crew member in a logo polo scrubbing a tiled shower wall",
+    "width": 900,
+    "height": 1600,
+    "ratio": "900/1600"
+  },
+  "showerScrub": {
+    "src": "photos/shower-scrub-4x5.jpg",
+    "alt": "A JaniCrew crew member in a logo polo scrubbing a tiled shower wall",
+    "width": 1280,
+    "height": 1600,
+    "ratio": "1280/1600"
+  },
+  "redPickup": {
+    "src": "photos/red-pickup.jpg",
+    "alt": "A red JaniCrew pickup truck with the diamond logo on the door, parked outside a client building",
+    "width": 570,
+    "height": 336,
+    "ratio": "570/336"
+  },
+  "floorBuffer": {
+    "src": "photos/floor-buffer.jpg",
+    "alt": "A JaniCrew crew member running a floor buffer across a marble lobby",
+    "width": 531,
+    "height": 494,
+    "ratio": "531/494"
+  },
+  "restroomSink": {
+    "src": "photos/restroom-sink.jpg",
+    "alt": "A JaniCrew crew member wiping a restroom counter and sink",
+    "width": 539,
+    "height": 514,
+    "ratio": "539/514"
+  },
+  "windowCleaning": {
+    "src": "photos/window-cleaning.jpg",
+    "alt": "A JaniCrew crew member squeegeeing an office window",
+    "width": 476,
+    "height": 514,
+    "ratio": "476/514"
+  },
+  "supplyCaddy": {
+    "src": "photos/supply-caddy.jpg",
+    "alt": "A JaniCrew supply caddy with spray bottles and cloths",
+    "width": 382,
+    "height": 296,
+    "ratio": "382/296"
+  },
+  "deskWipe": {
+    "src": "photos/desk-wipe.jpg",
+    "alt": "A JaniCrew crew member wiping an office desk",
+    "width": 453,
+    "height": 494,
+    "ratio": "453/494"
+  },
+  "poloLogo": {
+    "src": "photos/polo-logo.jpg",
+    "alt": "The JaniCrew diamond logo on a navy crew polo",
+    "width": 492,
+    "height": 220,
+    "ratio": "492/220"
+  }
+}

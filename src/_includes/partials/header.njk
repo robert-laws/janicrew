@@ -1,0 +1,25 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="JaniCrew home">
+      <img class="brand__mark" src="/images/logo-256.png" width="44" height="44" alt="">
+      <span class="brand__name">JaniCrew</span>
+    </a>
+    <a class="site-header__phone" href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="nav-toggle__label">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        {% for item in nav.header %}
+        {% set current = page.url == item.url or (item.url != "/" and page.url.startsWith(item.url)) %}
+        <li><a href="{{ item.url }}"{% if current %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="site-nav__actions">
+        <a class="site-nav__phone" href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a>
+        <a class="btn btn--primary" href="/quote/">Get a Free Quote</a>
+      </div>
+    </nav>
+  </div>
+</header>

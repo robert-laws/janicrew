@@ -1,0 +1,74 @@
+---
+layout: layouts/base.njk
+title: Why JaniCrew
+permalink: /why-janicrew/
+description: "The JaniCrew Standard: a written scope for every room, insured and bonded crews, a local owner you can call, and a free 5-10 minute walkthrough. Independently owned, one standard."
+eyebrow: Why JaniCrew
+heading: Independently owned. One standard.
+lede: "Every JaniCrew is owned and run by someone local. Every JaniCrew works to the same written standard. This page is that standard."
+heroImage: conferenceTable
+heroLabel: Crew member wiping a boardroom table
+---
+{% include "partials/hero.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">{{ standard.eyebrow }}</p>
+      <h2>What every JaniCrew commits to.</h2>
+      <p class="lede">{{ standard.intro }}</p>
+    </div>
+    {% include "partials/standard-strip.njk" %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container split">
+    <div>
+      {% set img = images | slot("poloLogo") %}
+      {% set slotLabel = "The JaniCrew diamond on a crew polo" %}
+      {% set ratio = "16/9" %}
+      {% set eager = false %}
+      {% include "partials/image-slot.njk" %}
+    </div>
+    <div>
+      <p class="eyebrow">Locally owned, JaniCrew backed</p>
+      <h2>The person who quotes your building is the person responsible for it.</h2>
+      <p>{{ janicrew.company.model }}</p>
+      <p>That is the whole idea. You get an owner who lives where you do and answers the phone, and a name with a written standard behind it. {{ janicrew.company.ownershipLine }}.</p>
+      <ul class="trust-bar" aria-label="Credentials">
+        {% for t in janicrew.company.trust %}<li class="badge">{{ t }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">How a quote works</p>
+      <h2>Ten minutes on site. No obligation.</h2>
+    </div>
+    {% include "partials/quote-steps.njk" %}
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container split split--wide-text">
+    <div>
+      <p class="eyebrow">Straight answers</p>
+      <h2>What we will and will not tell you.</h2>
+      <p>We will show you the checklist for every room, our insurance and bonding, and the name of the owner who will look after your building. We will not quote you a price without seeing the space, and we will not promise a service we do not do.</p>
+      <p class="mb-0">If that sounds like the kind of crew you want in your building, <a href="/quote/">ask for a walkthrough</a>.</p>
+    </div>
+    <div>
+      {% set img = images | slot("windowCleaning") %}
+      {% set slotLabel = "Crew member cleaning an office window" %}
+      {% set ratio = "1/1" %}
+      {% set eager = false %}
+      {% include "partials/image-slot.njk" %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

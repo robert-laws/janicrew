@@ -1,0 +1,14 @@
+{#
+  Renders a photo or a branded placeholder panel.
+  Inputs (set before include): img {src, alt, width, height, ratio} | null,
+  slotLabel (caption when empty), ratio (CSS aspect-ratio, default 4/3), eager (bool), slotClass
+#}
+{% if img and img.src %}
+<figure class="image-slot{% if slotClass %} {{ slotClass }}{% endif %}" style="--ratio: {{ img.ratio or ratio or '4/3' }}">
+  <img src="/images/{{ img.src }}" alt="{{ img.alt }}" width="{{ img.width }}" height="{{ img.height }}"{% if eager %} fetchpriority="high"{% else %} loading="lazy" decoding="async"{% endif %}>
+</figure>
+{% else %}
+<div class="image-slot image-slot--placeholder{% if slotClass %} {{ slotClass }}{% endif %}" style="--ratio: {{ ratio or '4/3' }}" role="img" aria-label="Photo placeholder: {{ slotLabel or 'photo to come' }}">
+  <span class="image-slot__caption">Photo slot: {{ slotLabel or "photo to come" }}</span>
+</div>
+{% endif %}

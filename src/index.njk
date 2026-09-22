@@ -1,0 +1,106 @@
+---
+layout: layouts/base.njk
+description: "JaniCrew is a locally owned commercial cleaning crew. Offices, restrooms, floors and carpets cleaned to a written standard. Free on-site quote in 5-10 minutes."
+eyebrow: Commercial cleaning, locally owned
+heading: Your local crew. Our standard of clean.
+lede: "Offices, restrooms, floors and carpets, cleaned to a written room-by-room standard by a crew whose owner answers the phone. Free walkthrough and monthly estimate in 5-10 minutes."
+heroImage: lobbyMopping
+heroLabel: Crew member mopping a lobby
+heroRatio: 16/9
+heroTrust: true
+bodyClass: page-home
+---
+{% include "partials/hero.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="section-header section-header--row">
+      <div>
+        <p class="eyebrow">What we clean</p>
+        <h2>Every room, spelled out.</h2>
+        <p class="lede">No "general cleaning". Each area in your building gets a written checklist, and this is what's on it.</p>
+      </div>
+      <a class="btn btn--secondary" href="/services/">All services</a>
+    </div>
+    {% include "partials/service-grid.njk" %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Industries we serve</p>
+      <h2>Built around your building's rules.</h2>
+      <p class="lede">A dental practice, a dealership and a school do not need the same scope. We write specifications around the regulations your industry works under.</p>
+    </div>
+    {% include "partials/industry-grid.njk" %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split split--wide-text">
+    <div>
+      <p class="eyebrow">How a free quote works</p>
+      <h2>Ten minutes on site. No obligation.</h2>
+      <p class="lede mb-6">You will not sit through a presentation. Your local JaniCrew owner walks the building with you and writes down the scope.</p>
+      <ol class="steps">
+        <li>
+          <h3>Call or send the form</h3>
+          <p>Tell us what kind of building you have and which rooms matter most.</p>
+        </li>
+        <li>
+          <h3>A 5-10 minute walkthrough</h3>
+          <p>We walk the space with you and note the scope room by room. No hassle.</p>
+        </li>
+        <li>
+          <h3>A monthly estimate in writing</h3>
+          <p>A written scope and a monthly price for the schedule you choose.</p>
+        </li>
+      </ol>
+      <div class="hero__actions" style="margin-top: var(--space-6)">
+        <a class="btn btn--primary btn--lg" href="/quote/">Get a Free Quote</a>
+        <a class="btn btn--secondary btn--lg" href="{{ site.phoneHref }}">Call {{ site.phoneDisplay }}</a>
+      </div>
+    </div>
+    <div class="media-with-burst">
+      <a class="starburst" href="/quote/"><span>Free Quote</span></a>
+      {% set img = images | slot("janitorialCart") %}
+      {% set slotLabel = "Crew member emptying office bins" %}
+      {% set ratio = "4/5" %}
+      {% set eager = false %}
+      {% include "partials/image-slot.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">{{ standard.eyebrow }}</p>
+      <h2>{{ standard.title }}</h2>
+      <p class="lede">{{ standard.intro }}</p>
+    </div>
+    {% include "partials/standard-strip.njk" %}
+    <p style="margin: var(--space-6) 0 0"><a class="btn btn--on-dark" href="/why-janicrew/">Read the full Standard</a></p>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container split">
+    <div>
+      {% set img = images | slot("redPickup") %}
+      {% set slotLabel = "Red JaniCrew pickup outside a client building" %}
+      {% set ratio = "16/9" %}
+      {% set eager = false %}
+      {% include "partials/image-slot.njk" %}
+    </div>
+    <div>
+      <p class="eyebrow">{{ franchise.eyebrow }}</p>
+      <h2>{{ franchise.teaser.title }}</h2>
+      <p class="lede">{{ franchise.teaser.body }}</p>
+      <a class="btn btn--primary" href="/own-a-janicrew/">{{ franchise.teaser.cta }}</a>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

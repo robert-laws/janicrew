@@ -1,0 +1,9 @@
+<div class="grid grid--4">
+  {% for i in industries %}
+  <article class="card card--link">
+    <h3 class="card__title"><a href="/industries/{{ i.slug }}/">{{ i.name }}</a></h3>
+    <p class="card__body">{{ i.headline }}</p>
+    <span class="card__arrow" aria-hidden="true">What we focus on</span>
+  </article>
+  {% endfor %}
+</div>

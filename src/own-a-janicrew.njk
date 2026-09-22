@@ -1,0 +1,137 @@
+---
+layout: layouts/base.njk
+title: Own a JaniCrew
+permalink: /own-a-janicrew/
+description: "Own and operate your own commercial cleaning business under the JaniCrew name. Independently owned, locally operated, backed by the JaniCrew Standard."
+eyebrow: Own a JaniCrew
+heading: Run your own cleaning business under a name people trust.
+lede: "JaniCrew franchisees own and operate their business independently. They adopt the JaniCrew name, serve their own community, and uphold the JaniCrew Standard. The rest is theirs."
+heroDark: true
+heroImage: redPickup
+heroLabel: Red JaniCrew pickup outside a client building
+heroRatio: 16/9
+heroCtas:
+  - label: Start the conversation
+    url: "#enquire"
+    style: accent
+  - label: Call (800) 355-2648
+    url: "tel:+18003552648"
+    style: secondary
+hasForm: true
+---
+{% include "partials/hero.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">The model</p>
+      <h2>Your business. Our name. One standard.</h2>
+    </div>
+    <div class="grid grid--3">
+      {% for m in franchise.model %}
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"></span>
+        <h3>{{ m.title }}</h3>
+        <p>{{ m.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container split">
+    <div>
+      {% set img = images | slot("officeVacuuming") %}
+      {% set slotLabel = "Crew member vacuuming an office" %}
+      {% set ratio = "1/1" %}
+      {% set eager = false %}
+      {% include "partials/image-slot.njk" %}
+    </div>
+    <div>
+      <p class="eyebrow">Who it's for</p>
+      <h2>People who already take pride in the work.</h2>
+      <ul class="checklist">
+        {% for w in franchise.whoFor %}<li>{{ w }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">What JaniCrew provides</p>
+      <h2>What you get when you carry the name.</h2>
+      {% if site.draft %}<p class="lede">Items marked as placeholders are still being finalised and will be confirmed in writing before any agreement.</p>{% endif %}
+    </div>
+    <div class="grid grid--3">
+      {% for p in franchise.provides %}
+      <article class="card">
+        <h3 class="card__title">{{ p.title }}</h3>
+        <p class="card__body">{{ p.body }}{% if p.placeholder and site.draft %} {% placeholder p.placeholder %}{% endif %}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container split split--wide-text">
+    <div>
+      <p class="eyebrow">What you commit to</p>
+      <h2>The Standard, from the other side.</h2>
+      <ul class="checklist">
+        {% for c in franchise.commit %}<li>{{ c }}</li>{% endfor %}
+      </ul>
+      <p style="margin-top: var(--space-5)"><a class="btn btn--on-dark" href="/why-janicrew/">Read the full JaniCrew Standard</a></p>
+    </div>
+    <div>
+      {% set img = images | slot("poloLogo") %}
+      {% set slotLabel = "The JaniCrew diamond on a crew polo" %}
+      {% set ratio = "16/9" %}
+      {% set eager = false %}
+      {% include "partials/image-slot.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">How it starts</p>
+      <h2>Four steps, no pressure.</h2>
+    </div>
+    <ol class="steps steps--row">
+      {% for s in franchise.steps %}
+      <li>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.body }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt" id="enquire">
+  <div class="container with-aside">
+    <div>
+      <div class="section-header">
+        <p class="eyebrow">Enquire</p>
+        <h2>Start the conversation.</h2>
+        <p class="lede">Tell us where you are and what you clean today. We will reply within a few business days.</p>
+      </div>
+      {% include "partials/franchise-form.njk" %}
+    </div>
+    <aside class="aside-card" aria-label="Contact">
+      <h2>Prefer to talk?</h2>
+      <a class="phone" href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a>
+      <p>Ask for the JaniCrew franchise team.</p>
+      <ul class="checklist">
+        <li>Independently owned and operated</li>
+        <li>One written standard</li>
+        <li>Your community, your accounts</li>
+      </ul>
+    </aside>
+  </div>
+</section>

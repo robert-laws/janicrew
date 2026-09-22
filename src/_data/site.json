@@ -1,0 +1,17 @@
+{
+  "name": "JaniCrew",
+  "url": "https://robert-laws.github.io/janicrew",
+  "tagline": "Your local crew. Our standard of clean.",
+  "supportingLine": "Cleaner spaces. Brighter days.",
+  "description": "JaniCrew is a locally owned and operated commercial cleaning crew. Offices, restrooms, floors and carpets, cleaned to a written standard. Free on-site quote in 5-10 minutes.",
+  "formEndpoint": "",
+  "email": "info@janicrew.com",
+  "emailIsPlaceholder": true,
+  "phone": "1-800-355-2648",
+  "phoneDisplay": "(800) 355-2648",
+  "phoneHref": "tel:+18003552648",
+  "region": "[Your Region]",
+  "address": "",
+  "hours": "",
+  "draft": true
+}

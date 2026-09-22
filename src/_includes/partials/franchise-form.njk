@@ -1,0 +1,67 @@
+{% set endpoint = site.formEndpoint %}
+{% if not endpoint %}
+<div class="form__notice mb-6" role="status">
+  <p><strong>Draft mode.</strong> This form is not connected to a form service yet, so submitting it opens your email app with the details filled in. Or call <a href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a>.</p>
+</div>
+{% endif %}
+<form class="form franchise-form" id="franchise-form" method="POST"
+      action="{{ endpoint if endpoint else 'mailto:' + site.email }}"{% if not endpoint %} enctype="text/plain"{% endif %}
+      data-endpoint="{{ endpoint }}"
+      data-thanks="{{ '/quote/thanks/?from=franchise' | htmlBaseUrl }}"
+      data-email="{{ site.email }}">
+  <input type="text" name="_gotcha" class="form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <input type="hidden" name="_subject" value="Own a JaniCrew enquiry (JaniCrew website)">
+  <input type="hidden" name="form_type" value="franchise">
+
+  <fieldset class="form__fieldset">
+    <legend class="form__legend">Tell us about you</legend>
+    <div class="form__grid form__grid--2">
+      <div class="field">
+        <label class="field__label" for="f-name">Your name</label>
+        <input class="input" type="text" id="f-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-email">Email</label>
+        <input class="input" type="email" id="f-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-phone">Phone <span class="field__optional">(optional)</span></label>
+        <input class="input" type="tel" id="f-phone" name="phone" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-territory">City or area you would serve</label>
+        <input class="input" type="text" id="f-territory" name="territory" required>
+      </div>
+      <div class="field span-2">
+        <span class="field__label" id="f-experience-label">Do you clean commercially today?</span>
+        <div class="choice-grid choice-grid--3" role="radiogroup" aria-labelledby="f-experience-label">
+          <label class="choice choice--compact">
+            <input type="radio" name="experience" value="Yes, I run a cleaning business">
+            <span class="choice__label">Yes, my own business</span>
+          </label>
+          <label class="choice choice--compact">
+            <input type="radio" name="experience" value="Yes, I work for one">
+            <span class="choice__label">Yes, for someone else</span>
+          </label>
+          <label class="choice choice--compact">
+            <input type="radio" name="experience" value="Not yet">
+            <span class="choice__label">Not yet</span>
+          </label>
+        </div>
+      </div>
+      <div class="field span-2">
+        <label class="field__label" for="f-message">Anything you want us to know <span class="field__optional">(optional)</span></label>
+        <textarea class="textarea" id="f-message" name="message"></textarea>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form__error" role="alert" hidden data-form-error>
+    <p>Something went wrong sending the form. Please try again, or call <a href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a>.</p>
+  </div>
+
+  <div class="form__actions">
+    <button class="btn btn--primary btn--lg" type="submit" data-submit>Start the conversation</button>
+    <p>We reply within a few business days.</p>
+  </div>
+</form>
