@@ -2,6 +2,12 @@
 permalink: /logo/
 noindex: true
 groups:
+  - id: peru-usa
+    title: Peru + USA concepts
+    items:
+      - [Paired flags, concept-paired-flags.png, "Peru’s vertical bands and the United States’ stars and stripes meet in one banner."]
+      - [Andes and Liberty, concept-andes-liberty.png, "Andean peaks sit beside the Statue of Liberty."]
+      - [Chakana and star, concept-peru-usa-lockup.png, "An Andean stepped cross pairs with an American star and stripes above a two-color wordmark."]
   - id: redraws
     title: Polished redraws
     items:
@@ -41,7 +47,7 @@ groups:
   <main>
     <header>
       <h1>PERUSA Logo Review</h1>
-      <p>Compare the original sketches, polished redraws, and new directions. Select any image to open it at full size.</p>
+      <p>PERUSA brings together Peru and the United States. Compare the original sketches, polished redraws, and new concepts. Select any image to open it at full size.</p>
       <nav aria-label="Logo categories">
         {% for group in groups %}
           <a href="#{{ group.id }}">{{ group.title }}</a>
@@ -56,7 +62,7 @@ groups:
           {% for title, file, description in group.items %}
             <figure>
               <a class="preview" href="/logo/files/{{ file }}" aria-label="Open {{ title }} at full size">
-                <img src="/logo/files/{{ file }}" alt="{{ description }}" {% if group.id != "redraws" %}loading="lazy"{% endif %}>
+                <img src="/logo/files/{{ file }}" alt="{{ description }}" {% if group.id != "peru-usa" %}loading="lazy"{% endif %}>
               </a>
               <figcaption>
                 <h3>{{ title }}</h3>
