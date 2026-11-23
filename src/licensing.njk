@@ -1,0 +1,21 @@
+---
+layout: layouts/page.njk
+title: JaniCrew Licensing
+heading: How the JaniCrew license works
+permalink: /licensing/
+description: Learn how to use the JaniCrew name for your commercial cleaning business, agree on a territory, and review the written terms.
+lede: The Business Name License Agreement sets out how you can operate your own commercial cleaning business under the JaniCrew name.
+heroDark: true
+heroCtas:
+  - label: Ask about licensing
+    url: "/own-a-janicrew/#enquire"
+    style: accent
+---
+{% for item in franchise.license %}
+<h2>{{ item.title }}</h2>
+<p>{{ item.body }}</p>
+{% endfor %}
+
+<h2>Review the written terms</h2>
+<p>Tell us where you’d like to operate and what you clean today. After we discuss your plans, you can review the agreement, the proposed territory, fees, and any agreed support before deciding whether to proceed.</p>
+<p><a href="/own-a-janicrew/#enquire">Send a licensing inquiry</a></p>

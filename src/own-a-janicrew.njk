@@ -5,7 +5,7 @@ permalink: /own-a-janicrew/
 description: "Own and operate your own commercial cleaning business under the JaniCrew name. Independently owned, locally operated, backed by the JaniCrew Standard."
 eyebrow: Own a JaniCrew
 heading: Run your own cleaning business under a name people trust.
-lede: "JaniCrew franchisees own and operate their business independently. They adopt the JaniCrew name, serve their own community, and uphold the JaniCrew Standard. The rest is theirs."
+lede: "Operate your own commercial cleaning business under the JaniCrew name in an agreed territory."
 heroDark: true
 heroImage: redPickup
 heroLabel: Red JaniCrew pickup outside a client building
@@ -58,24 +58,6 @@ hasForm: true
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <p class="eyebrow">What JaniCrew provides</p>
-      <h2>What you get when you carry the name.</h2>
-      {% if site.draft %}<p class="lede">Items marked as placeholders are still being finalised and will be confirmed in writing before any agreement.</p>{% endif %}
-    </div>
-    <div class="grid grid--3">
-      {% for p in franchise.provides %}
-      <article class="card">
-        <h3 class="card__title">{{ p.title }}</h3>
-        <p class="card__body">{{ p.body }}{% if p.placeholder and site.draft %} {% placeholder p.placeholder %}{% endif %}</p>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <section class="section section--dark">
   <div class="container split split--wide-text">
     <div>
@@ -113,7 +95,17 @@ hasForm: true
   </div>
 </section>
 
-<section class="section section--alt" id="enquire">
+<section class="section section--alt" aria-labelledby="license-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="license-heading">How the JaniCrew license works</h2>
+      <p class="lede">Explore what the agreement covers and what you’ll review before deciding whether to proceed.</p>
+    </div>
+    <a class="btn btn--primary" href="/licensing/">Explore JaniCrew licensing</a>
+  </div>
+</section>
+
+<section class="section" id="enquire">
   <div class="container with-aside">
     <div>
       <div class="section-header">
@@ -126,7 +118,7 @@ hasForm: true
     <aside class="aside-card" aria-label="Contact">
       <h2>Prefer to talk?</h2>
       <a class="phone" href="{{ site.phoneHref }}">{{ site.phoneDisplay }}</a>
-      <p>Ask for the JaniCrew franchise team.</p>
+      <p>Ask about licensing the JaniCrew name.</p>
       <ul class="checklist">
         <li>Independently owned and operated</li>
         <li>One written standard</li>
