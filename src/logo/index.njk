@@ -1,0 +1,72 @@
+---
+permalink: /logo/
+noindex: true
+groups:
+  - id: redraws
+    title: Polished redraws
+    items:
+      - [Flag heart, logo-1-clean.png, "A red, white, and navy heart with seven stars in three rows."]
+      - [Circular badge, logo-2-clean.png, "Open navy rings, outlined lettering, and seven stars."]
+  - id: emblems
+    title: Crests and seals
+    items:
+      - [Andes crest, concept-andes-crest.png, "A mountain ridgeline and three stars inside a shield."]
+      - [Seven-star seal, concept-seven-star-seal.png, "A retro round badge with a flag heart and an arc of stars."]
+  - id: hearts
+    title: Heart marks
+    items:
+      - [Ribbon heart, concept-ribbon-heart.png, "Interlocking ribbons and a star beside a horizontal wordmark."]
+      - [Woven heart, concept-woven-heart.png, "Stepped bands inspired by Andean weaving."]
+  - id: typography
+    title: Wordmarks and monograms
+    items:
+      - [Star monogram, concept-star-monogram.png, "A compact P with a star cut into the letter."]
+      - [Split wordmark, concept-split-wordmark.png, "Red PER and navy USA share one baseline."]
+  - id: sketches
+    title: Original sketches
+    items:
+      - [Heart sketch, logo-1.jpg, "Hand-painted flag heart with seven hand-drawn stars."]
+      - [Badge sketch, logo-2.jpg, "Blue-ink circular badge on ruled paper."]
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>PERUSA Logo Review</title>
+  <link rel="stylesheet" href="/assets/logo-review.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>PERUSA Logo Review</h1>
+      <p>Compare the original sketches, polished redraws, and new directions. Select any image to open it at full size.</p>
+      <nav aria-label="Logo categories">
+        {% for group in groups %}
+          <a href="#{{ group.id }}">{{ group.title }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+
+    {% for group in groups %}
+      <section id="{{ group.id }}" aria-labelledby="{{ group.id }}-heading">
+        <h2 id="{{ group.id }}-heading">{{ group.title }}</h2>
+        <div class="gallery">
+          {% for title, file, description in group.items %}
+            <figure>
+              <a class="preview" href="/logo/files/{{ file }}" aria-label="Open {{ title }} at full size">
+                <img src="/logo/files/{{ file }}" alt="{{ description }}" {% if group.id != "redraws" %}loading="lazy"{% endif %}>
+              </a>
+              <figcaption>
+                <h3>{{ title }}</h3>
+                <p>{{ description }}</p>
+              </figcaption>
+            </figure>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </main>
+</body>
+</html>

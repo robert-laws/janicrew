@@ -5,6 +5,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
   eleventyConfig.addPassthroughCopy({ "src/images": "images", "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "logo/*.{jpg,png}": "logo/files" });
   eleventyConfig.addWatchTarget("src/assets/");
 
   eleventyConfig.addShortcode("year", () => String(new Date().getFullYear()));
