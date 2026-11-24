@@ -2,6 +2,21 @@
 permalink: /logo/
 noindex: true
 groups:
+  - id: favorite
+    title: Current favorite
+    items:
+      - [Gold-outline heart, logo-1-gold-outline.png, "A continuous gold border frames the heart, with gold PERUSA lettering and seven white stars on navy."]
+  - id: beanies
+    title: Beanie mockups
+    items:
+      - [Navy with gold edging · Product, beanie-navy-gold-edge-product.png, "Navy rib-knit beanie with gold stitching around the heart patch."]
+      - [Navy with gold edging · On a model, beanie-navy-gold-edge-model.png, "Model wearing the navy beanie with the gold-edged patch."]
+      - [Black with gold edging · Product, beanie-black-gold-edge-product.png, "Black rib-knit beanie with the gold-edged heart patch."]
+      - [Black with gold edging · On a model, beanie-black-gold-edge-model.png, "Model wearing the black beanie with the gold-edged patch."]
+      - [Original navy · Product, beanie-navy-product.png, "Navy rib-knit beanie with a navy-edged heart patch."]
+      - [Original navy · On a model, beanie-navy-model.png, "Model wearing the original navy beanie."]
+      - [Antique gold · Product, beanie-gold-product.png, "Gold rib-knit beanie with a navy-edged heart patch."]
+      - [Antique gold · On a model, beanie-gold-model.png, "Model wearing the antique gold beanie."]
   - id: peru-usa
     title: Peru + USA concepts
     items:
@@ -48,7 +63,7 @@ groups:
   <main>
     <header>
       <h1>PERUSA Logo Review</h1>
-      <p>PERUSA brings together Peru and the United States. Compare the original sketches, polished redraws, and new concepts. Select any image to open it at full size.</p>
+      <p>PERUSA brings together Peru and the United States. Compare the logo concepts, original sketches, and beanie mockups. Select any image to open it at full size.</p>
       <nav aria-label="Logo categories">
         {% for group in groups %}
           <a href="#{{ group.id }}">{{ group.title }}</a>
@@ -63,7 +78,7 @@ groups:
           {% for title, file, description in group.items %}
             <figure>
               <a class="preview" href="/logo/files/{{ file }}" aria-label="Open {{ title }} at full size">
-                <img src="/logo/files/{{ file }}" alt="{{ description }}" {% if group.id != "peru-usa" %}loading="lazy"{% endif %}>
+                <img src="/logo/files/{{ file }}" alt="{{ description }}" {% if group.id != "favorite" %}loading="lazy"{% endif %}>
               </a>
               <figcaption>
                 <h3>{{ title }}</h3>
